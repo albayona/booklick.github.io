@@ -1,10 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Business } from '../../business/business';
-import { PostService } from '../../post/post.service';
-import { Post } from '../../post/post';
 import { ResidentService } from '../resident.service';
 import { Resident } from '../resident';
-import { ResidentDetail } from '../resident-detail';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({

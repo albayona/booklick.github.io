@@ -6,9 +6,6 @@ import {ToastrModule} from 'ngx-toastr';
 import {AppComponent} from './app.component';
 import {PostModule} from './post/post.module';
 import {ResidentModule} from './resident/resident.module';
-import {BusinessModule} from './business/business.module';
-import {NotificationModule} from './notification/notification.module';
-import {HttpClient} from '@angular/common/http';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import {HttpErrorInterceptor} from './utility/HttpErrorInterceptorService.service';
 import {TokenInterceptor} from './utility/HttpErrorInterceptorService.service';
@@ -29,12 +26,9 @@ import {LocationRegistrationModule} from './location-registration/location-regis
 import {HomeModule} from "./home/home.module";
 import {AgmCoreModule} from '@agm/core';
 import {NeighborhoodLayoutModule} from './neighborhoodLayout/neighborhoodLayout.module';
-import {GroupModule} from "./group/group.module";
 import {LocationModule} from './location/location.module';
 import {FavorModule} from './favor/favor.module';
-import {GroupLayoutModule} from "./group-layout/group-layout.module";
 import {DatePipe} from "@angular/common";
-import {GroupRegistrationModule} from "./group-registration/group-registration.module";
 import {AdminModule} from "./admin/admin.module";
 
 const routes: Routes = [
@@ -55,15 +49,12 @@ const routes: Routes = [
     BrowserAnimationsModule,
     PostModule,
     ResidentModule,
-    BusinessModule,
-    NotificationModule,
     NeighborhoodModule,
     LoginResgistrationModule,
     LoginModule,
     ProfileRegistrationModule,
     HttpClientModule,
     LayoutModule,
-    GroupLayoutModule,
     LoginModule,
     DashboardModule,
     RegistrationModule,
@@ -74,9 +65,9 @@ const routes: Routes = [
     LocationModule,
     HomeModule,
     AdminModule,
-    GroupModule,
+
     FavorModule,
-    GroupRegistrationModule,
+
 
   ],
   bootstrap: [AppComponent],

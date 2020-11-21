@@ -5,7 +5,6 @@
  */
 
 import {Resident} from '../home/resident';
-import {Business} from '../business/business';
 import {DatePipe} from "@angular/common";
 
 /**
@@ -44,10 +43,6 @@ export class Post {
    */
   author: Resident;
 
-  /**
-   * Represents the business author of this post
-   */
-  public business: Business;
 
   // /**
   //  * Represents the group this post is shared with

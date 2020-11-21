@@ -1,2 +1,0 @@
-# booklick.github.io
-Booklick
