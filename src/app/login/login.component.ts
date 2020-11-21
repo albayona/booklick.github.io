@@ -66,9 +66,9 @@ export class LoginComponent implements OnInit {
             console.log(localStorage.getItem('user_code'))
 
             if (this.protected.current_roles == "admin")
-              localStorage.setItem('user_url', "http://127.0.0.1:5000/admins/" + this.protected.current_identity);
+              localStorage.setItem('user_url', "https://booklick.me/admins/" + this.protected.current_identity);
             else
-              localStorage.setItem('user_url', "http://127.0.0.1:5000/student/" + this.protected.current_identity);
+              localStorage.setItem('user_url', "https://booklick.me/student/" + this.protected.current_identity);
           });
 
 

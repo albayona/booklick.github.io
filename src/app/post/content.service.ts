@@ -40,7 +40,7 @@ export class ContentService {
     console.log("aaaaaservice")
 
    this.c = this.http.get<ContentObject>(
-      "http://127.0.0.1:5000/contents/"
+      "https://booklick.me/contents/"
     );
     console.log(this.c)
     return this.c
@@ -50,7 +50,7 @@ export class ContentService {
   getBooklists(): Observable<BooklistObject> {
     console.log("aaaaaservice")
     return this.http.get<BooklistObject>(
-      "http://127.0.0.1:5000/students/" + localStorage.getItem('user_code') + "/booklists/"
+      "https://booklick.me/students/" + localStorage.getItem('user_code') + "/booklists/"
     );
   }
 

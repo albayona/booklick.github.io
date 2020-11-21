@@ -35,13 +35,13 @@ export class LoginService {
 
     console.log(user)
     console.log(pass)
-    return this.http.post<Token>("http://127.0.0.1:5000/login/", {username: user, password: pass});
+    return this.http.post<Token>("https://booklick.me/login/", {username: user, password: pass});
 
   }
 
 
   logout(): Observable<Message> {
-    return this.http.post<Message>("http://127.0.0.1:5000/logout/", {});
+    return this.http.post<Message>("https://booklick.me/logout/", {});
 
   }
 
@@ -50,7 +50,7 @@ export class LoginService {
   }
 
   getProtected(): Observable<Protected> {
-    return this.http.get<Protected>( "http://127.0.0.1:5000/protected");
+    return this.http.get<Protected>( "https://booklick.me/protected");
   }
 
 }
