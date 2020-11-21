@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { NeighborhoodService } from 'src/app/neighborhood/neighborhood.service';
-import { Neighborhood } from 'src/app/neighborhood/neighborhood';
-import { ActivatedRoute } from '@angular/router';
+import {NeighborhoodService} from "../../neighborhood/neighborhood.service";
+import {ActivatedRoute} from "@angular/router";
+import {Neighborhood} from "../../neighborhood/neighborhood";
+
 
 @Component({
   selector: 'app-registration',

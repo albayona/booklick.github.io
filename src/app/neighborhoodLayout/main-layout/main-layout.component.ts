@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Neighborhood } from 'src/app/neighborhood/neighborhood';
-import { NeighborhoodService } from 'src/app/neighborhood/neighborhood.service';
+
 import {SimpleAuthService} from "../../simple-auth-service/simple-auth.service";
+import {NeighborhoodService} from "../../neighborhood/neighborhood.service";
+import {Neighborhood} from "../../neighborhood/neighborhood";
 
 @Component({
   selector: 'app-main-layout',
