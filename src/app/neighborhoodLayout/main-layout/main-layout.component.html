@@ -1,0 +1,43 @@
+<div class="header">
+</div>
+<div fxLayout="row" fxFlex="100">
+  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+  <label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+  </label>
+  <div id="sidebarMenu">
+    <ul class="sidebarMenuInner">
+      <li routerLink="/neighborhoods/{{neighId}}">
+        <h6> <i class="fa fa-home fa-fw" aria-hidden="true"></i> Home</h6>
+      </li>
+      <li routerLink="/neighborhoods/{{neighId}}/businesses">
+        <h6><i class="fa fa-briefcase fa-fw" aria-hidden="true"></i> Businesses</h6>
+      </li>
+      <li routerLink="/main">
+        <h6><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> Events</h6>
+      </li>
+      <li routerLink="/neighborhoods/{{neighId}}/locations">
+        <h6><i class="fa fa-map-marker fa-fw" aria-hidden="true"></i> Locations</h6>
+      </li>
+      <li routerLink="/neighborhoods/{{neighId}}/groups">
+        <h6><i class="fa fa-users fa-fw" aria-hidden="true"></i> Groups</h6>
+      </li>
+      <li routerLink="/neighborhoods/{{neighId}}/residents">
+        <h6><i class="fa fa-user fa-fw" aria-hidden="true"></i> Residents</h6>
+      </li>
+      <li routerLink="/main">
+        <h6><i class="fa fa-cubes fa-fw" aria-hidden="true"></i> Services</h6>
+      </li>
+      <li routerLink="/neighborhoods/{{neighId}}/favors">
+        <h6><i class="fa fa-handshake-o" aria-hidden="true"></i> Favors</h6>
+      </li>
+
+    </ul>
+  </div>
+  <div class="content" fxLayout="column" fxFlex>
+    <router-outlet></router-outlet>
+
+  </div>
+</div>

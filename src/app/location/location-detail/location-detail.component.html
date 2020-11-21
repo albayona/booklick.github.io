@@ -1,0 +1,39 @@
+<div class="container-fluid border border-light" style="border:1px solid #cecece;">
+
+  <div class="row">
+    <div id="resTitle" class="col-sm-2 col-md-2" style="text-align: center;">
+
+      <h3>
+        {{name}}
+      </h3>
+    </div>
+  </div>
+
+  <div class="row" style="margin: 1vw;">
+    <div class="col-sm-6 col-md-6">
+      <img style="width: 100%;" src="../../../assets/img/loc-{{locId}}.png" alt="">
+    </div>
+    <div class="col-sm-2 col-md-2">
+      <h3 style="font-size: 1.4vw; color: white;">Open Time:</h3>
+      <h4 style="font-size: 1vw;"> {{location.openTime}}</h4>
+      <br />
+      <h3 style="font-size: 1.4vw; color: white;">Close Time:</h3>
+      <h4 style="font-size: 1vw;"> {{location.closeTime}}</h4>
+      <br />
+      <h3 style="font-size: 1.4vw; color: white;">Address:</h3>
+      <h4 style="font-size: 1vw;"> {{location.address}}</h4>
+    </div>
+
+    <div class="col-sm-2 col-md-2">
+      <h3 style="font-size: 1.4vw; color: white;">Latitude:</h3>
+      <h4 style="font-size: 1vw;"> {{location.latitude}}</h4>
+      <br />
+      <h3 style="font-size: 1.4vw; color: white;">Longitude:</h3>
+      <h4 style="font-size: 1vw;"> {{location.longitude}}</h4>
+      <br />
+    </div>
+
+
+
+  </div>
+</div>

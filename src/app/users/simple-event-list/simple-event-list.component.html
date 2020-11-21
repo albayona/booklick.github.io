@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+</head>
+
+
+
+<body>
+
+<div class=" row">
+
+  <div class="col-1 no-pad">
+  </div>
+  <div id="main" class="col-9 no-pad" style = "margin: 0 auto">
+    <br>
+    <div *ngFor="let favor of favors">
+
+      <div id="{{ favor.id + 'ev'}}" #v>
+        <app-simple-event (init)="updateSpacers(favor.id)" *visibleWith="v.id" [favor]=favor>
+        </app-simple-event>
+        <br>
+        <app-spacer id="{{favor.id + 'e'}}" [spacersNumber]="30"></app-spacer>
+      </div>
+      <div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-1 no-pad">
+  </div>
+
+
+</div>
+
+
+</body>
+
+</html>

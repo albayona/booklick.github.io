@@ -1,0 +1,87 @@
+<div class="container-fluid">
+  <div class="row v-center justify-content-center">
+
+    <div id="place" class="col-sm-4 col-md-4 ">
+
+      <div class="myForm">
+        <h2> Create Login</h2>
+        <form method="post" [formGroup]="residentLoginForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="username" class="bmd-label-floating">
+              <h5>Username</h5>
+            </label>
+            <input type="text" class="form-control" formControlName="username" id="username"
+              placeholder="Enter username">
+          </div>
+          <div class="form-group">
+            <label for="password" class="bmd-label-floating">
+              <h5>Password</h5>
+            </label>
+
+            <div class="col no-padding input-group">
+              <span class="input-group-prepend input-group-text">
+                <i class="fa fa-key" aria-hidden="true"></i>
+              </span>
+              <input type="password" class="form-control" formControlName="password" id="password"
+                placeholder="Enter password" style="margin-bottom: 5px;">
+            </div>
+
+            <label for="confirmPass" class="bmd-label-floating">
+              <h5>Confirm Password</h5>
+            </label>
+
+            <div class="col no-padding input-group">
+              <span class="input-group-prepend input-group-text">
+                <i class="fa fa-key" aria-hidden="true"></i>
+              </span>
+              <input type="password" class="form-control" formControlName="confirmPass" id="confirmPass"
+                placeholder="Confirm password" style="margin-bottom: 5px;">
+            </div>
+
+
+          </div>
+
+          <div class="form-group">
+            <label for="governmentId" class="bmd-label-floating">
+              <h5>Government ID</h5>
+            </label>
+
+            <div class="col no-padding input-group">
+              <span class="input-group-prepend input-group-text">
+                <i class="fa fa-id-card" aria-hidden="true"></i>
+              </span>
+              <input type="number" class="form-control" formControlName="govId" id="govId" placeholder="Enter ID number"
+                style="margin-bottom: 5px;">
+            </div>
+
+          </div>
+          <label for="governmentId" class="bmd-label-floating">
+            <h5>Neighborhood</h5>
+          </label>
+          <select formControlName="neighborhood" id="inputState" class="form-control">
+            <option [ngValue]= "null">Choose...</option>
+            <option value={{n.id}} *ngFor="let n of neighborhoods"> {{n.name}}</option>
+          </select>
+
+          <div id="button">
+            <button type="submit" class="btn btn-primary btn-round-lg btn-lg one">Submit</button>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+    <div id="place" class="rightPanel col-sm-6 col-md-6">
+      <div class="thumbPrint">
+        <div class="row v-center text-center">
+          <div class="col">
+            <img src="/assets/img/thumbprint.png" alt="Smiley face">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

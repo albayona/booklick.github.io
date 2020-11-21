@@ -1,0 +1,43 @@
+<body>
+<div [ngbCollapse]="isCollapsed" class="backgroundC">
+
+
+  <br>
+  <div *ngFor="let r of comments; let i = index">
+
+
+    <div class="row">
+
+      <!--      routerLink="/neighborhoods/{{r.author..id}}/residents/{{r.author.id}}/"-->
+      <div *ngIf="r.author.profilePicture != null" class="col-1" routerLink="/neighborhoods/residents/{{r.author.id}}/">
+        <img class="profilePicture" src="{{r.author.profilePicture}}">
+      </div>
+
+      <div class=" col-1">
+        <div class="spacer"></div>
+      </div>
+
+      <div *ngIf="r.author.profilePicture != null" class="col-1" routerLink="/neighborhoods//residents/{{r.author.id}}/" class="col-9">
+        <div class="name">{{r.author.name}}<span class="text"> &nbsp; {{r.text}}</span></div>
+      </div>
+
+      <div class="col-2">
+        <div class="spacer"></div>
+      </div>
+
+    </div>
+
+
+    <div class="date">{{getDate(r.date)}}  </div>
+
+
+    <br>
+
+
+  </div>
+
+
+</div>
+
+</body>
+

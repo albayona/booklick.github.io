@@ -1,0 +1,111 @@
+<body class="postFrame">
+
+<div *ngIf="editable()" class="row">
+  <div class="col-md-4 tag" style="text-align: center">
+    <form [formGroup]="form">
+
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-8 placeholder2">
+          <ng-select [multiple]="true" [(ngModel)]="images" placeholder="Add your pictures" formControlName="demo" style="background-color: #4b3d9f">
+            <ng-option *ngFor="let r of images" [value]="r">
+              <img class=" smallPicture" [src]="'http://icons.iconarchive.com/icons/designbolts/free-multimedia/256/Photo-icon.png'"/>
+              <span class="name"> {{r.name}} </span>
+            </ng-option>
+          </ng-select>
+        </div>
+
+        <div class="col-1" (click)="selectAll()">
+          <app-file-picker #picker5 (picked)="addImage()">
+          </app-file-picker>
+        </div>
+        <div class="col-1"></div>
+
+      </div>
+
+    </form>
+  </div>
+
+  <div class="col-md-6">
+  </div>
+
+  <div class="col-md-2 tag2">
+    <div style="margin-left:auto; margin-right:30px ">
+      <button class="buttons btn btn-outline-light" (click)="addPictures()">Post</button>
+    </div>
+  </div>
+</div>
+
+<div class="fitandcenter">
+  <br>
+  <div *ngIf="album.length == 0" style="max-width: 220px">
+    <tr>
+      <td>
+        <i class="fas fa-pencil-alt fa-2x icon">
+        </i>
+      </td>
+      <td>
+    <span class="emptyMessage">{{emptyMessage}}
+          </span>
+      </td>
+    </tr>
+
+    <br>
+  </div>
+
+
+  <div class="row fitandcenter">
+    <div class="row fitandcenter" style="max-width: 70%">
+
+      <div *ngFor="let p of album, let i = index" class="col-lg-4 col-md-10  thumb">
+        <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+
+           data-target="#image-gallery10"
+           attr.data-image="{{p}}">
+
+          <img class="img-thumbnail {{ (i == 0) ? 'active' : '' }}" attr.data-slide-to="{{i}}" data-target="#carouselExampleIndicatorsGallery"
+               src='{{p}}'
+               alt="Another alt text">
+        </a>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="image-gallery10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+
+          <div id="{{'carouselExampleIndicatorsGallery'}}" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li *ngFor="let f of album,let i = index" data-target="#carouselExampleIndicatorsGallery" class="{{ (i == 0) ? 'active' : '' }}" attr.data-slide-to="{{i}}"></li>
+            </ol>
+
+            <div class="carousel-inner">
+              <div *ngFor="let f of album,let i = index" class="{{ (i == 0) ? 'carousel-item active' : 'carousel-item' }}">
+                <img class="d-block w-100" src="{{album[i]}}" alt="slide {{i}}">
+
+              </div>
+
+            </div>
+            <a class="carousel-control-prev" href="#{{'carouselExampleIndicatorsGallery'}}" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#{{'carouselExampleIndicatorsGallery'}}" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
+
+</body>
+

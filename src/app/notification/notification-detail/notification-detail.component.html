@@ -1,0 +1,29 @@
+<div class="jumbotron" style="width: 60rem;">
+  <h1 class="display-4">{{notificationDetail.header}}</h1>
+  <h3>Priority:</h3>
+  <h6>{{notificationDetail.priority}}</h6>
+  <hr>
+  <div class="container">
+    <div class="row">
+      <h5>Description</h5>
+    </div>
+    <div class="row">
+      <p>{{notificationDetail.description}}</p>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+        <h5>Author</h5>
+        {{notificationDetail.author.name}}
+      </div>
+      <div class="col-sm">
+        <h5>Seen</h5>
+        {{notificationDetail.seen}}
+      </div>
+      <div class="col-sm">
+        <h5>Business</h5>
+        {{notificationDetail.business.name}}
+      </div>
+    </div>
+  </div>
+  <h6>{{notificationDetail.publishDate}}</h6>
+</div>

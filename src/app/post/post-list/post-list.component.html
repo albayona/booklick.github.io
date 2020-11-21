@@ -1,0 +1,26 @@
+<body>
+<!-- Bootstrap row -->
+
+<div class="row backgroundB">
+
+   <div  id="main" class="row">
+
+    <div class="col-lg-3 col-md-6 mb-4"  *ngFor="let content of contents">
+
+      <div id="{{ content.id }}" #v>
+        <app-post-detail (init)="updateSpacers(content.id)" *visibleWith="v.id" [content]="content">
+        </app-post-detail>
+        <br>
+        <br>
+        <app-spacer id="{{content.id + 's'}}" [spacersNumber]="30"></app-spacer>
+      </div>
+      <div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</body>

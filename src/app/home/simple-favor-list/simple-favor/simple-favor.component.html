@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!-- Author:  Andres Bayona -->
+<html>
+<head>
+</head>
+
+<body class="container-fluid " style="max-width: 160px">
+
+<br>
+<div><span class="item " [ngClass]="type">&nbsp; &nbsp; {{booklist.name}} &nbsp;&nbsp; </span></div>
+
+
+<div class="name "><span class="date">2020   </span></div>
+
+<br>
+
+
+<img class="imageR"
+     src='https://pbs.twimg.com/profile_images/1237768278103281664/Xhs6GY6u.jpg'
+>
+
+
+<div class="options">
+
+  <i (click)="toggle11(); toggle12() " attr.data-target="#collapse_{{booklist.id + type}}" data-toggle="collapse" *ngIf="toggle1" class="options" class="fa fa-caret-down fa-2x"></i>
+  <i (click)="toggle11(); toggle12() " attr.data-target="#collapse_{{booklist.id  + type}}" data-toggle="collapse" *ngIf="toggle2" class=" options" class="fa fa-caret-up fa-2x"></i>
+
+</div>
+
+
+<div id="collapse_{{booklist.id  + type}}" class="collapse" #d>
+
+  <p class="text">{{booklist.description}}</p>
+</div>
+
+</body>
+</html>

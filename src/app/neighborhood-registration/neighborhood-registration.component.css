@@ -1,0 +1,177 @@
+:host {
+
+  width: 100%;
+  height: 100%;
+
+  max-width: 100%;
+  overflow-x: hidden;
+
+}
+
+.row {
+  margin: 0px;
+}
+
+.info {
+  padding: 50px;
+  max-width: 100%;
+
+}
+
+.rotate45 {
+  -webkit-transform: rotate(48deg);
+  -moz-transform: rotate(48deg);
+  -o-transform: rotate(48deg);
+  -ms-transform: rotate(48deg);
+  transform: rotate(48deg);
+
+  max-width: 70px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.register-left {
+  text-align: center;
+  color: #fff;
+  margin-top: 4%;
+}
+h1{
+  font-size: 4em;
+}
+
+h3 {
+  font-size: 1.6em;
+  line-height: 1.4em;
+
+}
+
+.register-left img {
+  width: 25%;
+  -webkit-animation: mover 2s infinite alternate;
+
+  animation: mover 0.7s infinite alternate;
+}
+
+@-webkit-keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+}
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
+.register-right {
+  background: #ffffff;
+  border-top-left-radius: 10% 50%;
+  border-bottom-left-radius: 10% 50%;
+
+  height: 60vh;
+  background-color: #282446;
+}
+
+.container-fluid {
+  padding-right: 0px;
+  height: 100%;
+  width:100%;
+  background-image: linear-gradient(to right bottom, #504fa1, #5e4fb2, #704ec1, #844ace, #9b42da);
+
+}
+
+.neighborhoodForm {
+  padding-top: 5%;
+  height: 100%;
+  text-align: center;
+  color: white;
+}
+
+.formCol {
+  padding: 0px;
+  border-top-left-radius: 10% 50%;
+  border-bottom-left-radius: 10% 50%;
+}
+
+.form-row {
+  padding-left: 20%;
+  padding-right: 20%;
+  margin-right: 0px;
+}
+
+form {
+  height: 100%;
+}
+
+label{
+  text-align: left;
+}
+
+#inner{
+  font-size: 1.5em;
+  margin: 0em;
+}
+
+::placeholder {
+  font-family: Futura;
+  font-size: 1.2em;
+
+}
+
+select{
+  font-family: Futura;
+  font-size: 1.2em;
+
+}
+.btn-round-lg {
+  border-radius: 40px;
+  background-color: #9544d7;
+  -webkit-box-shadow: 0px 0px 19px -3px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 19px -3px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 19px -3px rgba(0, 0, 0, 1);
+  box-shadow: 0 5px #999;
+}
+
+.btn {
+  width: 180px;
+  height: 60px;
+  font-family: Futura;
+  font-style: normal;
+  color: #cc5caf;
+  font-size: 1.3em;
+  text-align: center;
+  border-color: white;
+  background-color: white;
+}
+
+.but1,
+.but2 {
+  padding-top: 50px;
+}
+
+.btn-round-lg:hover {
+  background-color: #544FA6;
+  color: white;
+  border-color: #544FA6;
+}
+
+.btn-round-lg:active {
+  background-color: #9644D7!important;
+  box-shadow: 0 5px #666;
+  transform: translateY(10px);
+  border-color: #9644D7!important;
+}
+
+#button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

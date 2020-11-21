@@ -1,0 +1,57 @@
+:host {
+  height: 80%;
+}
+
+h3 {
+  font-size: 1.6vw;
+  font-family: Futura;
+}
+
+h4 {
+  font-size: 1.3vw;
+  font-family: Futura;
+  color: white;
+}
+
+#resTitle {
+  background-color: #4b3d9f;
+  border-bottom-right-radius: 1vw;
+  color: #ffffff;
+  padding: .5vw;
+}
+
+.container-fluid {
+  background-color: #36393F;
+  height: 100%;
+  margin-bottom: 1vw;
+  border-bottom-right-radius: 1vw;
+  border-top-right-radius: 1vw;
+}
+
+#cardsRow {
+  margin: 3vw;
+  margin-top: 2vw;
+  max-height: 100%;
+}
+
+.card {
+  height: 5vw;
+  background-color: #c23d69;
+  border-radius: 0.5vw;
+  margin: 1vw;
+}
+
+.card:hover {
+  opacity: .5;
+}
+
+#point:hover {
+  cursor: pointer !important;
+}
+
+.buttons {
+  color: #ac00ff;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: white;
+}

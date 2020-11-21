@@ -1,0 +1,29 @@
+<div class="card" style="width: 60rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{favorDetail.title}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Author: {{favorDetail.author.name}}</h6>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <h6>Type:</h6>
+          {{favorDetail.type}}
+        </div>
+        <div class="col-sm">
+          <h6>Description:</h6>
+          {{favorDetail.description}}
+        </div>
+        <div class="col-sm">
+          <h6>Candidates:</h6>
+          <dd *ngFor= "let a of favorDetail.candidates">{{a.name}}</dd>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <h6>is Help Wanted:</h6>
+          {{favorDetail.isHelpWanted}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

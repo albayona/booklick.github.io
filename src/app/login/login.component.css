@@ -1,0 +1,89 @@
+.container-fluid {
+  height: 100%;
+  background: url("/assets/img/starry.png") no-repeat center center fixed;
+  background-size: 100vw;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.v-center {
+  position: relative;
+  transform: translatey(-50%);
+  top: 50%;
+}
+
+h2 {
+  text-align: center;
+  font-family: Futura;
+  color: white;
+  font-size: 1.6vw;
+}
+
+h3 {
+  text-align: center;
+  font-family: Futura;
+  color: white;
+  font-size: 1.2vw;
+  margin: 0;
+}
+
+h5 {
+  color: #8e9297;
+  font-size: 0.9vmax;
+  font-family: Futura;
+  margin-bottom: 0;
+}
+
+h6 {
+  text-align: center;
+  color: #b9bbbe;
+  font-family: Futura;
+  font-size: 1.05vw;
+}
+
+#login {
+  border-radius: 0.5vw;
+  width: 25vw;
+  background-color: #36393f;
+  margin: 5px;
+  padding: 1vw;
+}
+
+form {
+  padding: 1.5vw;
+}
+
+input[type="text"],
+input[type="password"],
+select,
+select:hover,
+select,
+option:active{
+  font-family: "Futura";
+  font-size: 1.2vw;
+  background-color: #313339;
+  border-color: #222428;
+  font-weight: lighter;
+  color: #dcddde;
+}
+
+
+
+.form-control:focus{
+  border-color: #7289da;
+  box-shadow: none;
+  border-width: 2px;
+  color: #dcddde;
+  background-color:#313339 ;
+}
+
+
+
+.btn{
+  background-color: #7289da;
+  border: none;
+}

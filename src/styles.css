@@ -1,0 +1,69 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+
+body {
+
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+
+  background-color: white;
+}
+
+h1 {
+  font-family: Futura;
+  font-size: 3.5em;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: Futura;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+}
+
+h3 {
+  font-family: Futura, Trebuchet MS, Arial, sans-serif;
+  font-size: 1em;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 23px;
+}
+
+p {
+  font-family: Futura, Trebuchet MS, Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+blockquote {
+  font-family: Futura, Trebuchet MS, Arial, sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+pre {
+  font-family: Futura, Trebuchet MS, Arial, sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+

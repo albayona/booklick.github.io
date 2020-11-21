@@ -1,0 +1,108 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Mar 27, 2019, 11:19:30 PM
+    Author     : Andres
+*/
+.title-caption {
+  color: rgba(0, 47, 255, 0.664);
+}
+
+.author-caption {
+  color: grey;
+}
+
+.checked {
+  color: orange;
+}
+
+.backgroundB {
+  background-color: #dadada;
+}
+
+
+body {
+
+  max-height: 100%;
+  background-color: #dadada;
+}
+
+::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+
+#body-row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#sidebar-container {
+  min-height: 100vh;
+  background-color: #333;
+  padding: 0;
+}
+
+/* Sidebar sizes when expanded and expanded */
+.sidebar-expanded {
+  width: 230px;
+}
+
+.sidebar-collapsed {
+  width: 60px;
+}
+
+/* Menu item*/
+#sidebar-container .list-group a {
+  height: 50px;
+  color: white;
+}
+
+/* Submenu item*/
+#sidebar-container .list-group .sidebar-submenu a {
+  height: 45px;
+  padding-left: 30px;
+}
+
+.sidebar-submenu {
+  font-size: 0.9rem;
+}
+
+/* Separators */
+.sidebar-separator-title {
+  background-color: #333;
+  height: 35px;
+}
+
+.sidebar-separator {
+  background-color: #333;
+  height: 25px;
+}
+
+.logo-separator {
+  background-color: #333;
+  height: 60px;
+}
+
+
+.spacer {
+  margin-left: 10px;
+}
+
+.x-icon {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 1px;
+  margin-right: 5px;
+  color: dodgerblue;
+  cursor: pointer;
+}
+

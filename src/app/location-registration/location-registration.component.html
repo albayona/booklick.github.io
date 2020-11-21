@@ -1,0 +1,108 @@
+<div class="container-fluid">
+  <div class="row v-center">
+
+    <div id="place" class="col-sm-5 col-md-5 ">
+      <div class="row v-center text-center">
+        <div class="col">
+          <h2>New Location</h2>
+        <img src="/assets/img/place.png" alt="Smiley face">
+        </div>
+      </div>
+    </div>
+
+    <div id="place" class="col-sm-7 col-md-7">
+      <div class="myForm">
+        <form [formGroup]="locationForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="name" class="bmd-label-floating">
+              <h5>Name</h5>
+            </label>
+            <input type="text" class="form-control" formControlName="name" id="name" placeholder="Enter name">
+          </div>
+          <div class="form-group">
+            <label for="address" class="bmd-label-floating">
+              <h5>Address</h5>
+            </label>
+            <input type="text" class="form-control" formControlName="address" id="address" placeholder="Enter address">
+          </div>
+
+
+
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="openTime" class="bmd-label-floating">
+                  <h5>Open Time</h5>
+                </label>
+                <div class="col no-padding input-group">
+                  <span class="input-group-prepend input-group-text">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                  </span>
+                  <input type="time" class="form-control" formControlName="openTime" id="openTime">
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="closeTime" class="bmd-label-floating">
+                  <h5>Close Time</h5>
+                </label>
+                <div class="col no-padding input-group">
+                  <span class="input-group-prepend input-group-text"> <i class="fa fa-clock-o" aria-hidden="true"></i>
+                  </span>
+                  <input type="time" class="form-control" formControlName="closeTime" id="closeTime">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="latitude" class="bmd-label-floating">
+                  <h5>Latitude</h5>
+                </label>
+                <div class="col no-padding input-group">
+                  <span class="input-group-prepend input-group-text">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  </span>
+                  <input type="number" class="form-control" step=".000001" formControlName="latitude" id="latitude">
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="longitude" class="bmd-label-floating">
+                  <h5>Longitude</h5>
+                </label>
+
+                <div class="col no-padding input-group">
+                  <span class="input-group-prepend input-group-text">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  </span>
+                  <input type="number" class="form-control" step=".000001" formControlName="longitude" id="longitude">
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+          <label for="governmentId" class="bmd-label-floating">
+            <h5>Neighborhood</h5>
+          </label>
+          <select formControlName="neighborhood" id="inputState" class="form-control">
+            <option [ngValue]= "null">Choose...</option>
+            <option value={{n.id}} *ngFor="let n of neighborhoods"> {{n.name}}</option>
+          </select>
+
+          <div id="button">
+            <button type="submit" class="btn btn-primary btn-round-lg btn-lg one">Submit</button>
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,138 @@
+.container-fluid {
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    #f65476,
+    #fc6f6c,
+    #fe8a67,
+    #fca36a,
+    #f8ba75
+  );
+}
+
+#place {
+  padding: 10px 15px;
+}
+
+.v-center {
+  position: relative;
+  transform: translatey(-50%);
+  top: 50%;
+}
+
+h2 {
+  color: white;
+  font-size: 2.8vw;
+  font-family: Futura;
+}
+
+h5 {
+  color: #f65874;
+  font-size: 1.2vmax;
+  font-family: Futura;
+}
+
+::placeholder,
+select {
+  font-family: Futura;
+  font-size: 1.1vw;
+  font-weight: lighter;
+  color: white;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  /* Magic! */
+  max-width: 14vw;
+}
+
+.myForm {
+  background: white;
+  height: 100%;
+  margin: 0 12vw;
+  padding: 2vw;
+  border-radius: 2vw;
+}
+
+.form-control:focus,
+select {
+  background-color: #f65874;
+  opacity: 0.8;
+  color: white;
+  font-family: Futura;
+}
+
+label {
+  margin: 0;
+}
+
+input[type="time"] {
+  width: 20%;
+  font-family: Futura;
+  font-size: 1.1vw;
+}
+
+input[type="number"] {
+  width: 20%;
+  font-family: Futura;
+  font-size: 1.1vw;
+}
+
+input[type="text"] {
+  font-family: Futura;
+  font-size: 1.1vw;
+}
+
+.no-padding{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.fa{
+  font-size: 1.1vw;
+}
+
+.btn-round-lg {
+  border-radius: 40px;
+  background-color: #9544d7;
+  -webkit-box-shadow: 0px 0px 19px -3px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 19px -3px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 19px -3px rgba(0, 0, 0, 1);
+  box-shadow: 0 5px #999;
+}
+
+.btn {
+  width: 15vw;
+  height: 5vw;
+  font-family: Futura;
+  font-style: normal;
+  color: black;
+  opacity: .85;
+  font-size: 1.5vw;
+  text-align: center;
+  border-color: #00C7CC;
+  border-width: .2vw;
+  background-color: white;
+}
+
+
+.btn-round-lg:hover {
+  background-color: #F65675;
+  color: white;
+  border-color:#F65675 ;
+}
+
+.btn-round-lg:active {
+  background-color: #F8B773!important;
+  box-shadow: 0 5px #666;
+  border-color: #F8B773!important;
+  transform: translateY(10px);
+}
+
+#button{
+  padding: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,180 @@
+<table style="margin: 0 auto; min-width:250px;">
+  <tr class="backgroundD">
+    <td class="postFrame container-fluid">
+
+      <div class="row header">
+        <div class="col-md-auto ">
+
+          <img class="profilePicture" src="https://cdn.booklick.net/public/img/icons/text-white.svg">
+        </div>
+        <div class="col-md-auto">
+          <div class="row name">{{content.title}}
+          </div>
+          <div class="row spacer">
+          </div>
+          <div class="row date">{{getDate(content.year)}}
+          </div>
+        </div>
+
+      </div>
+
+      <div class="spacer">
+        <table class="table-light">
+          <thead>
+          <tr>
+            <th class="a" scope="col"> by {{content.creator}}</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td class="c"> {{content.description}}</td>
+          </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+      <div *ngIf="this.album != null && this.album.length != 0 " class="spacerPhoto">
+
+
+        <div id="{{'carouselExampleIndicators' + this.content.id}}" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li *ngFor="let f of album,let i = index" data-target="#carouselExampleIndicators"
+                class="{{ (i == 0) ? 'active' : '' }}" attr.data-slide-to="{{i}}"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div *ngFor="let f of album,let i = index"
+                 class="{{ (i == 0) ? 'carousel-item active' : 'carousel-item' }}">
+              <img class="d-block w-100" src="{{album[i]}}" alt="slide {{i}}">
+
+            </div>
+
+          </div>
+          <a class="carousel-control-prev" href="#{{'carouselExampleIndicators' + this.content.id}}" role="button"
+             data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#{{'carouselExampleIndicators' + this.content.id}}" role="button"
+             data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="spacer">
+
+
+        <div class="row">
+          <div class="col-md-4">
+            <a class=" buttonsa btn btn-light d-flex justify-content-center" (click)="toggleCreateComments()"> <i
+              class="fa fa-comments"></i></a>
+          </div>
+
+          <div class="col-md-4">
+            <a class="buttonsb btn btn-light  d-flex justify-content-center" (click)="addLike()"> <i
+              class="fa fa-thumbs-up"></i></a>
+          </div>
+          <div class="col-md-4">
+            <a class="buttonsc btn btn-light  d-flex justify-content-center" (click)=" toggleCreateComments()"> <i
+              class="fa fa-share-square"></i></a>
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+      <div class="spacer">
+
+
+        <div class="row">
+
+          <div class="col-md-4">
+            <a class="options d-flex justify-content-center" (click)=" toggleComments()"> Comments
+              </a>
+          </div>
+
+
+          <div class="col-md-4">
+            <a class="options d-flex justify-content-center">Likes </a>
+          </div>
+
+
+          <div class="col-md-4">
+            <a data-toggle="collapse" attr.data-target="#viewers{{content.id}}"
+               class="options d-flex justify-content-center"> Viewers </a>
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+      <div>
+        <app-post-comment-create [post]="content" (updateComment)="updateComments()"></app-post-comment-create>
+
+        <app-post-comment  [comments]="content.comments"></app-post-comment>
+
+
+      </div>
+
+      <div class="spacer">
+
+        <a *ngIf="commentComponent.isCollapsed == false" class="options d-flex justify-content-center"
+           (click)=" toggleComments()"> Hide comments ({{content.comments.length}}) </a>
+      </div>
+
+    </td>
+
+
+    <td class="viewersFrame collapse width" id="viewers{{content.id}}">
+
+      <div *ngIf="editable()" class="row">
+        <div class="options col-8">Add viewers
+        </div>
+        <div class=col-2>
+          <a class=" buttons2 btn btn-light d-flex justify-content-center " (click)="addViewers()"> <i
+            class="fa fa-plus-square"></i></a>
+        </div>
+      </div>
+
+
+      <ng-select *ngIf="editable()" [multiple]="true" [(ngModel)]="selected" placeholder="Type or select">
+        <ng-option *ngFor="let r of residents" [value]="r">
+
+          <img class=" smallPicture" [src]="r.profilePicture"/>
+          <span class="name2"> {{r.name}} </span>
+          <!--    <img height="15" width="15" [src]="r.profilePicture"/>-->
+        </ng-option>
+      </ng-select>
+      <br>
+      <br>
+
+      <div class="options">All viewers
+      </div>
+      <div class="list-group">
+        <input class="form-control" id="myInput" type="text" placeholder="Search..." [(ngModel)]="searchModel">
+        <a href="neighborhoods/residents/{{r.id}}"
+           class="list-group-item list-group-item-action" style="padding: 1px; min-width: 100%; margin-bottom: 5px"
+           *ngFor="let r of viewers  | residentName:searchModel">
+          <span><img class=" smallPicture" [src]="r.profilePicture"/></span>
+          <span class="name2"> {{r.name}}</span>
+          <!--    <img height="15" width="15" [src]="r.profilePicture"/>-->
+        </a>
+
+      </div>
+
+
+    </td>
+
+
+  </tr>
+
+</table>
+

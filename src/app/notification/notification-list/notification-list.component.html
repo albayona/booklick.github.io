@@ -1,0 +1,13 @@
+<h3>
+  Notifications
+</h3>
+<div *ngIf= "selected">
+  <app-notification-detail [notificationDetail]= "selectedNotification"></app-notification-detail>
+</div>
+
+<div *ngFor= "let c of notifications">
+  <div class="alert alert-info" role="alert" (click)= "onSelected(c)" style="width: 60rem;">
+    <h5 class="card-title">{{c.header}}</h5>
+    <p> {{c.publishDate}}</p>
+  </div>
+</div>

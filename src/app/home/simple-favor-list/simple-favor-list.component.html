@@ -1,0 +1,75 @@
+<body>
+<!-- Bootstrap row -->
+
+
+<div class="row content">
+
+
+  <div class="col-lg-2 col-md-1 mb-1">
+
+    <div class="favorLayout" style="max-width: 200px">
+
+
+      <div class=" row">
+
+        <div class="col-1 no-pad">
+        </div>
+
+        <div id="main" class="col-9 no-pad" style="margin: 0 auto">
+          <br>
+          <div *ngIf="boocklists == undefined">
+            <tr>
+              <td>
+                <i class="fas fa-pencil-alt fa-2x icon">
+                </i>
+              </td>
+              <td>
+          <span class="emptyMessage">{{emptyMessage}}
+          </span>
+              </td>
+            </tr>
+
+            <br>
+          </div>
+
+          <div *ngFor="let blist of boocklists">
+
+            <div (click)="onSelected(blist.name)">
+              <app-simple-favor [booklist]="blist" [type]="type">
+              </app-simple-favor>
+            </div>
+            <br>
+          </div>
+
+        </div>
+
+        <div class="col-1 no-pad">
+        </div>
+
+
+      </div>
+    </div>
+
+
+    <br>
+
+    <br>
+
+
+  </div>
+
+
+  <div class="col-lg-10 col-md-11 mb-11">
+
+
+    <app-post-list [contentsByInput]="true" [neigh_id]="2" >
+
+    </app-post-list>
+
+  </div>
+
+
+</div>
+
+
+</body>

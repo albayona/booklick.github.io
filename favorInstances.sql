@@ -1,0 +1,5 @@
+insert into FavorEntity (id, dateposted, description, ishelpwanted, title, type, author_id) values (258, null, 'I need..', 1, 'Material', 'Lend', 131);
+insert into FavorEntity (id, dateposted, description, ishelpwanted, title, type, author_id) values (259, null, 'I have been painting ...', 1, 'Painting Houses', 'Painting', 131);
+insert into FavorEntity (id, dateposted, description, ishelpwanted, title, type, author_id) values (260, null, 'Since I moved to this neighborhood...', 0, 'Places', 'Knowing the Neighborhood', 131);
+insert into FavorEntity (id, dateposted, description, ishelpwanted, title, type, author_id) values (261, null, 'I have been constructing my new ...', 1, 'Hammer', 'Lend', 131);
+insert into FavorEntity (id, dateposted, description, ishelpwanted, title, type, author_id) values (262, null, 'I need someone who could...', 0, 'Favor', 'Pick up', 131);

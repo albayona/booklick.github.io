@@ -1,0 +1,92 @@
+<div class="postFrame">
+
+  <br>
+
+  <form name="post" (ngSubmit)="reviewForm.form.valid && addPost(reviewForm)" #reviewForm="ngForm" novalidate>
+    <div class="row">
+
+      <div style="margin-left:auto; margin-right:30px ">
+        <button class="buttons btn btn-outline-light" style="font-size: 18px; font-weight: bold" type="submit">Content</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-1 "></div>
+
+      <div class="form-group col-10 ">
+        <label for="Text"></label><input type="text" name="Text" class="form-control placeholder2" placeholder="Add a title" id="Text" [(ngModel)]="post.title"
+                                         #Text="ngModel" [ngClass]="{ 'is-invalid': reviewForm.submitted && Text.invalid }" required>
+        <div class="invalid-feedback">
+          <div>Title missing</div>
+        </div>
+      </div>
+      <div class="col-1 ">
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-1 "></div>
+      <div class="form-group col-10 ">
+        <label for="Text2"></label><input type="text" name="Text2" class="form-control placeholder2" placeholder="Write what you want" id="Text2" [(ngModel)]="post.description"
+                                          #Text2="ngModel" [ngClass]="{ 'is-invalid': reviewForm.submitted && Text2.invalid }" required>
+        <div class="invalid-feedback">
+          <div>Body missing</div>
+        </div>
+      </div>
+
+      <div class="col-1 "></div>
+
+    </div>
+
+
+  </form>
+  <div *ngIf="!group" class="row" style="margin-top: 30px">
+    <div class="col-1 "></div>
+
+    <div class="col-10 placeholder2 container-fluid">
+      <ng-select [multiple]="true" [(ngModel)]="selected" placeholder="Who can see your post? Type or select">
+        <ng-option *ngFor="let r of residents" [value]="r">
+          <img class=" smallPicture" [src]="r.profilePicture"/>
+          <span class="name"> {{r.name}} </span><span class="nickName"> ({{r.nickname}})</span>
+          <!--    <img height="15" width="15" [src]="r.profilePicture"/>-->
+        </ng-option>
+      </ng-select>
+    </div>
+    <div class="col-1"></div>
+  </div>
+
+  <form [formGroup]="form">
+
+
+    <div class="row" style="margin-top: 30px">
+      <div class="col-1 "></div>
+
+
+      <div class="col-8 placeholder2 container-fluid">
+        <ng-select [multiple]="true" [(ngModel)]="images" placeholder="Your pictures will appear here" formControlName="demo">
+          <ng-option *ngFor="let r of images" [value]="r">
+            <img class=" smallPicture" [src]="'http://icons.iconarchive.com/icons/designbolts/free-multimedia/256/Photo-icon.png'"/>
+            <span class="name"> {{r.name}} </span><span class="nickName"> ({{r.type}})</span>
+          </ng-option>
+        </ng-select>
+      </div>
+
+      <div class="col-2" (click)="selectAll()">
+        <app-file-picker (picked)="addImage()">
+        </app-file-picker>
+
+      </div>
+
+
+      <div class="col-1 "></div>
+
+
+    </div>
+
+
+  </form>
+
+  <br>
+</div>
+

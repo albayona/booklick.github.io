@@ -1,0 +1,12 @@
+<div class="postFrame">
+  <div class="list-group">
+    <input class="form-control placeholder2" id="myInput" type="text" placeholder="Search..." [(ngModel)]="searchModel">
+    <a href="neighborhoods/{{this.neighborhood_id}}/residents/{{r.id}}" class="list-group-item list-group-item-action item5" *ngFor="let r of residents  | residentName:searchModel">
+
+      <img class=" smallPicture" [src]="r.profilePicture"/>
+      <span class="name"> {{r.name}} </span><span class="nickName"> ({{r.nickname}})</span>
+      <!--    <img height="15" width="15" [src]="r.profilePicture"/>-->
+    </a>
+
+  </div>
+</div>

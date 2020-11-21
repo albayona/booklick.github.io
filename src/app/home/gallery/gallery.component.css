@@ -1,0 +1,81 @@
+.btn:focus, .btn:active, button:focus, button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#image-gallery .modal-footer {
+  display: block;
+}
+
+.emptyMessage {
+
+  color: rgb(154, 154, 153);
+  cursor: pointer;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+}
+
+.icon {
+  color: rgb(154, 154, 153);
+}
+
+
+.thumb {
+  margin: 0;
+  padding: 0;
+}
+
+.thumbnail {
+  margin: 0;
+  padding: 0;
+}
+
+.fitandcenter {
+  max-width: 100%;
+  margin: 0 auto
+
+}
+
+body {
+  max-height: 260px;
+  min-width: 100%;
+
+  background-color: white;
+  border-image-repeat: stretch;
+  border-image-source: none;
+  border-image-width: 1;
+  border-radius: 6px;
+  border: 1px solid rgb(193, 193, 193);
+  color: rgb(38, 38, 38);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 9px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-weight: 400;
+
+  text-align: center;
+
+  overflow: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+
+}
+
+::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}

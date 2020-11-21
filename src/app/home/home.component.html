@@ -1,0 +1,327 @@
+<div style="min-height: 100%;">
+  <div class=" banner">
+
+
+    <div class="wraper2 row">
+      <div class="wraper row">
+
+        <div>
+          <div class="outer-circle">
+            <a class="inner-circle" href="#" data-image-id="" data-toggle="modal" data-title=""
+
+               data-target="#image-profile"
+               attr.data-image="https://cdn4.iconfinder.com/data/icons/seo-web-blue-1/100/seo__web_blue_1_22-512.png">
+
+              <img class="inner-circle {{ (0 == 0) ? 'active' : '' }}" data-target="#profilePic2"
+                   src='https://cdn4.iconfinder.com/data/icons/seo-web-blue-1/100/seo__web_blue_1_22-512.png'
+                   alt="Another alt text">
+            </a>
+
+          </div>
+        </div>
+
+        <div style="align-self: flex-end">
+          <tr class="name">Your student profile {{username}}
+          </tr>
+          <tr class="year">Booklick
+          </tr>
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <a style="position: absolute; min-width: 100%;  display: block; text-align: center" href="#" data-image-id=""
+       data-toggle="modal" data-title=""
+
+       data-target="#image-mural"
+       attr.data-image="https://universidadean.edu.co/sites/default/files/noticias/internas/booklick-plataforma-principal.jpg">
+
+      <img class="muralPicture {{ (0 == 0) ? 'active' : '' }}" data-target="#mural2"
+           src='https://universidadean.edu.co/sites/default/files/noticias/internas/booklick-plataforma-principal.jpg'
+           alt="Another alt text">
+    </a>
+
+
+    <div class="transparencyPanel"></div>
+
+
+  </div>
+
+
+  <div class="modal fade" id="image-profile" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+       aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+
+        <div id="{{'carouselExampleIndicators'}}" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#profilePic2" class="{{ (0 == 0) ? 'active' : '' }}"></li>
+          </ol>
+
+          <div class="carousel-inner">
+            <div class="{{ (0 == 0) ? 'carousel-item active' : 'carousel-item' }}">
+              <img class="d-block w-100" src="{{resident.profilePicture}}" alt="slide {{0}}">
+
+            </div>
+          </div>
+
+          <td data-target="#picpost" data-toggle="collapse">
+            <app-file-picker #pick1 (picked)="obtainFile()">
+            </app-file-picker>
+          </td>
+          <td id="picpost" class="collapse width col">
+            <button class="buttons btn btn-outline-light" style="font-size: 18px; font-weight: bold" type="submit"
+                    (click)="addPicture()">Upload picture
+            </button>
+          </td>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="image-mural" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+       aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+
+        <div id="{{'carouselExampleIndicators5'}}" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#mural2" class="{{ (0 == 0) ? 'active' : '' }}"></li>
+          </ol>
+
+          <div class="carousel-inner">
+            <div class="{{ (0 == 0) ? 'carousel-item active' : 'carousel-item' }}">
+              <img class="d-block w-100" src="{{resident.muralPicture}}" alt="slide {{0}}">
+
+            </div>
+          </div>
+
+          <td data-target="#picpost3" data-toggle="collapse">
+            <app-file-picker #pick2 (picked)="obtainFile2()">
+            </app-file-picker>
+          </td>
+          <td id="picpost3" class="collapse width col">
+            <button class="buttons btn btn-outline-light" style="font-size: 18px; font-weight: bold" type="submit"
+                    (click)="addMural()">Upload picture
+            </button>
+          </td>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="info">
+    <div class="options">More of {{resident.name}}
+
+    </div>
+
+    <div class="options">
+      <i (click)="toggle11(); toggle12() " attr.data-target="#collapseR_{{resident.id }}" data-toggle="collapse"
+         *ngIf="toggle1" class=" fa fa-caret-down fa-2x"></i>
+      <i (click)="toggle11(); toggle12() " attr.data-target="#collapseR_{{resident.id}}" data-toggle="collapse"
+         *ngIf="toggle2" class=" fa fa-caret-up fa-2x"></i>
+    </div>
+
+  </div>
+
+  <div id="collapseR_{{resident.id}}" class="collapse">
+    <div class="infoPanel container-fluid">
+
+      <div class="attributeLine">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="residentAttributeName">
+              <span> &nbsp;</span>
+              <span class="atributeIcon fas fa-info-circle">
+            </span> &nbsp; About
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div *ngIf="!isEmpty(resident.preferences)" class="residentAttribute"> nn
+            </div>
+            <div *ngIf="isEmpty(resident.preferences)" class="emptyAttribute"> Nothing to show
+            </div>
+          </div>
+          <div class="col-md-4">
+          </div>
+        </div>
+
+
+        <div class="attributeLine">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="residentAttributeName">
+                <span> &nbsp;</span>
+                <span class="atributeIcon fas fa-signature">
+            </span> &nbsp; Nickname
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div *ngIf="!isEmpty(resident.nickname)" class="residentAttribute"> {{resident.nickname}}
+              </div>
+              <div *ngIf="isEmpty(resident.nickname)" class="emptyAttribute"> Nothing to show
+              </div>
+            </div>
+            <div class="col-md-4">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="attributeLine">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="residentAttributeName">
+              <span> &nbsp;</span>
+              <span class="atributeIcon fas fa-inbox">
+            </span> &nbsp; E-mail
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div *ngIf="!isEmpty(resident.email)" class="residentAttribute"> {{resident.email}}
+            </div>
+            <div *ngIf="isEmpty(resident.email)" class="emptyAttribute"> Nothing to show
+            </div>
+          </div>
+          <div class="col-md-4">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="attributeLine">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="residentAttributeName">
+              <span> &nbsp;</span>
+              <span class="atributeIcon fas fa-map-marked">
+            </span> &nbsp; Address
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div *ngIf="!isEmpty(resident.address)" class="residentAttribute"> {{resident.address}}
+            </div>
+            <div *ngIf="isEmpty(resident.address)" class="emptyAttribute"> Nothing to show
+            </div>
+          </div>
+          <div class="col-md-4">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="attributeLine">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="residentAttributeName">
+              <span> &nbsp;</span>
+              <span class="atributeIcon  fas fa-phone-square-alt">
+            </span> &nbsp; Phone
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div *ngIf="!isEmpty(resident.phoneNumber)" class="residentAttribute"> {{resident.phoneNumber}}
+            </div>
+            <div *ngIf="isEmpty(resident.phoneNumber)" class="emptyAttribute"> Nothing to show
+            </div>
+          </div>
+          <div class="col-md-4">
+          </div>
+        </div>
+      </div>
+
+      <div class="attributeLine">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="residentAttributeName">
+              <span> &nbsp;</span>
+              <span class="atributeIcon  fas fa-birthday-cake">
+            </span> &nbsp; Birthday
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div *ngIf="!isEmpty(resident.birthDate)" class="residentAttribute"> {{resident.birthDate}}
+            </div>
+            <div *ngIf="isEmpty(resident.birthDate)" class="emptyAttribute"> Nothing to show
+            </div>
+          </div>
+          <div class="col-md-4">
+          </div>
+        </div>
+      </div>
+
+      <div class="attributeLine">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="residentAttributeName">
+              <span> &nbsp;</span>
+              <span class="atributeIcon fas fa-history">
+            </span> &nbsp; Joined in
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div *ngIf="!isEmpty(resident.joinDate)" class="residentAttribute"> {{resident.joinDate}}
+            </div>
+            <div *ngIf="isEmpty(resident.joinDate)" class="emptyAttribute"> Nothing to show
+            </div>
+          </div>
+          <div class="col-md-4">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+
+  <div class="row content">
+
+    <div class="col-lg-1 col-md-1 mb-1">
+
+    </div>
+    <div class="col-lg-10 col-md-4 mb-4">
+
+
+      <!--      <div class="title3 favorLayout" >Upload content</div>-->
+
+      <!--      <div class="favorLayout">-->
+      <!--        <app-post-create *ngIf="editable()" [residents]="residents" [neigh_id]="neigh_id" (updatePost)="updatePosts()">-->
+      <!--        </app-post-create>-->
+
+      <!--      </div>-->
+
+      <div class="title3 favorLayout">Your booklists</div>
+
+      <div class="favorLayout">
+        <app-simple-favor-list
+          [emptyMessage]="'You still have no favors to show here. Get started by going to the sidebar.'"
+          [type]="'color1'">
+        </app-simple-favor-list>
+      </div>
+
+      <br>
+
+      <br>
+    </div>
+
+
+    <div class="col-lg-1 col-md-1 mb-1">
+
+    </div>
+
+
+  </div>
+</div>
+

@@ -1,0 +1,113 @@
+<div class="container-fluid">
+  <div class="row v-center justify-content-center">
+
+    <div id="place" class="col-sm-4 col-md-4 ">
+
+      <div class="myForm">
+
+        <form method="post" [formGroup]="residentProfileForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="name" class="bmd-label-floating">
+              <h5>Name</h5>
+            </label>
+            <input type="text" class="form-control" formControlName="name" id="name" placeholder="Enter your name">
+          </div>
+          <div class="form-group">
+            <label for="nickname" class="bmd-label-floating">
+              <h5>Nickname</h5>
+            </label>
+
+            <div class="col no-padding input-group">
+              <span class="input-group-prepend input-group-text">
+                <i class="fa fa-key" aria-hidden="true"></i>
+              </span>
+              <input type="text" class="form-control" formControlName="nickname" id="nickname"
+                     placeholder="Enter your nickname" style="margin-bottom: 5px;">
+            </div>
+
+          </div>
+          <div class="form-group">
+
+            <label for="email" class="bmd-label-floating">
+              <h5>Email</h5>
+            </label>
+
+            <div class="col no-padding input-group">
+              <span class="input-group-prepend input-group-text">
+                <i class="fa fa-at" aria-hidden="true"></i>
+              </span>
+              <input type="email" class="form-control" formControlName="email" id="email" placeholder="Enter your email"
+                     style="margin-bottom: 5px;">
+            </div>
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="livingSince" class="bmd-label-floating">
+              <h5>What year did you start living here?</h5>
+            </label>
+
+            <div class="col no-padding input-group">
+              <span class="input-group-prepend input-group-text">
+                <i class="fa fa-at" aria-hidden="true"></i>
+              </span>
+              <input type="livingSince" class="form-control" formControlName="livingSince" id="livingSince" placeholder="Type year"
+                     style="margin-bottom: 5px;">
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label for="phone" class="bmd-label-floating">
+              <h5>Phone Number</h5>
+            </label>
+
+            <div class="col no-padding input-group">
+              <span class="input-group-prepend input-group-text">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+              </span>
+              <input type="tel" class="form-control" formControlName="phone" id="phone"
+                     placeholder="Enter your phone number" style="margin-bottom: 5px;">
+            </div>
+
+          </div>
+
+          <div class="form-group">
+            <label for="address" class="bmd-label-floating">
+              <h5>Address</h5>
+            </label>
+
+            <div class="col no-padding input-group">
+              <span class="input-group-prepend input-group-text">
+                <i class="fa fa-home" aria-hidden="true"></i>
+              </span>
+              <input type="text" class="form-control" formControlName="address" id="address"
+                     placeholder="Enter your address" style="margin-bottom: 5px;">
+            </div>
+
+          </div>
+          <div id="button">
+            <button type="submit" class="btn btn-primary btn-round-lg btn-lg one">Submit</button>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+    <div id="place" class="rightPanel col-sm-6 col-md-6">
+      <div class="thumbPrint">
+        <div class="row v-center text-right">
+
+          <div class="col">
+            <h1> Create your profile. See you inside!</h1>
+            <img src="/assets/img/person.svg" alt="Smiley face">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

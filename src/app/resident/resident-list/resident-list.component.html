@@ -1,0 +1,27 @@
+<div class="container-fluid border border-light" style="border:1px solid #cecece;">
+
+  <div class="row">
+    <div id="resTitle" class="col-sm-2 col-md-2" style="text-align: center;">
+
+      <h3>
+        Residents
+      </h3>
+    </div>
+  </div>
+
+
+  <div id="cardsRow" class="row">
+    <div *ngFor="let r of residents;let i = index" class="col-sm-3 col-md-3 align-items-center"
+      style="text-align: center; padding: 0;">
+      <div id="point" routerLink="/neighborhoods/{{neighId}}/residents/{{r.id}}" class="card card-block d-flex"
+        [style.backgroundColor]=colors[i]>
+        <div class="card-body align-items-center d-flex justify-content-center">
+          <h4>
+            {{r.name}}
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
